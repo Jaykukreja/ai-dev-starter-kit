@@ -180,7 +180,7 @@ Use the whole loop. Next section.
 
 What an actual session looks like.
 
-**1. Describe what you want**
+**1. 💭 Say what you want, in plain English**
 
 ```
 /plan a landing page with a headline, a description, and an email signup form
@@ -195,7 +195,7 @@ You get back a numbered plan — maybe six steps.
 
 ![The plan](docs/demo-signup-plan-ready.png)
 
-**2. Save before you start**
+**2. 💾 Save first, so you can always undo**
 
 ```
 /save
@@ -203,7 +203,7 @@ You get back a numbered plan — maybe six steps.
 
 Now anything that goes wrong can be undone. This makes experimenting free.
 
-**3. Build step one**
+**3. 🔨 Build step one. Just step one.**
 
 ```
 /build step 1 - create the page file with a basic layout
@@ -212,48 +212,71 @@ Now anything that goes wrong can be undone. This makes experimenting free.
 It tells you what it is about to change. **Read that.** Press `y` to approve.
 It makes the change, then tells you exactly how to check it.
 
-**4. Check it**
+**4. 👀 Look at it yourself**
 
 Run what it told you to run. Look at the result. Does it match what you asked
 for?
 
-**5. Repeat, one step at a time**
+**5. 🔁 Repeat, one step at a time**
 
 `/build step 2`, then `/build step 3`. Check after each one.
 
 Never batch them. If step 3 breaks, you want to know it was step 3.
 
-**6. Lost?**
+**6. 😵 It built something and you have no idea what it did**
+
+Normal. Happens to everyone. Ask:
 
 ```
 /explain app/page.tsx
 ```
 
-**7. Broken?**
+Line by line, plain English. Do this until you could describe the file to
+someone else. If you cannot, you do not own that code — the AI does.
+
+**7. 💥 It stopped working and you do not know why**
+
+Also normal. Also happens to everyone, including people who have been doing
+this for twenty years.
 
 ```
 /stuck the form submits but nothing happens, no error in the console
 ```
 
-**8. Before you commit**
+Tell it what you expected, what actually happened, and paste the error if there
+is one. It will not fix it — it points you at the one most likely cause and
+lets you find it.
+
+That is deliberate. Watching someone else fix your bug teaches you nothing.
+
+**8. ✅ Before you commit**
 
 ```
 /code-check
 ```
 
-**9. Save**
+Reads everything you changed and reports what is wrong, worst first. Fix what
+it flags. Argue with it if you think it is wrong — it might be.
+
+**9. 💾 Save it**
 
 ```
 /save
 ```
 
-**10. Next thing**
+Checks you are not about to commit a password, then writes a commit message
+that explains why rather than what.
+
+**10. 🆕 On to the next thing**
 
 ```
 /new
 ```
 
-Fresh conversation. Back to step 1.
+Fresh conversation, empty context. Back to step 1.
+
+Do not skip this one. Carrying a finished task into the next one is how the
+model gets confused and starts editing files nobody asked about.
 
 ---
 
