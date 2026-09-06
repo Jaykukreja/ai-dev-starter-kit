@@ -12,7 +12,7 @@ who wants to build without paying for tools.
 
 ---
 
-## Install once, use everywhere
+## ⚡ Install once, use everywhere
 
 Already have OpenCode? Four commands and you are done.
 
@@ -48,7 +48,19 @@ Then open it and edit — your stack, your rules, how to run and test it.
 
 ---
 
-## Installing OpenCode
+## 💻 Recommended — use it inside VS Code
+
+Open Extensions (`Cmd + Shift + X`), search **"OpenCode Beta"** by SST, install.
+
+It puts OpenCode in a pane right next to your files, so you can watch the code
+change as it happens. Much easier to follow than a bare terminal, especially
+when you are learning.
+
+Works fine without it. But do this one.
+
+---
+
+## 📦 Installing OpenCode
 
 About ten minutes. All free.
 
@@ -104,16 +116,9 @@ Type this and press Enter:
 
 If it starts asking questions about your landing page, you are ready.
 
-### Optional — VS Code
-
-Open Extensions (`Cmd + Shift + X`), search **"OpenCode Beta"** by SST, install.
-It puts OpenCode in a pane next to your files.
-
-Not required. A plain terminal works exactly the same.
-
 ---
 
-## The six commands
+## 🛠 The six commands
 
 | Command | When to use it |
 |---|---|
@@ -126,11 +131,11 @@ Not required. A plain terminal works exactly the same.
 
 ---
 
-## Pick your way in
+## 🎯 Pick your way in
 
 You do not have to use all of this. Take what is useful.
 
-### "I just want my code reviewed"
+### 🔍 "I just want my code reviewed"
 
 Open any project and run:
 
@@ -145,7 +150,7 @@ what is wrong and why. Nothing else here has to be used.
 
 Plenty of people never use anything else. Fine.
 
-### "I get stuck and want a rubber duck that talks back"
+### 🦆 "I get stuck and want a rubber duck that talks back"
 
 ```
 /stuck the login form submits but the page never redirects
@@ -156,7 +161,7 @@ you the one thing to check first. You do the finding.
 
 That is on purpose. The debugging muscle only grows if you use it.
 
-### "I inherited a codebase and I am lost"
+### 🗺 "I inherited a codebase and I am lost"
 
 ```
 /explain src/middlewares/auth.js
@@ -165,13 +170,13 @@ That is on purpose. The debugging muscle only grows if you use it.
 Line by line, plain English, every term defined. Ask as often as you like — it
 costs nothing and nobody is judging you.
 
-### "I want to build something from scratch"
+### 🚀 "I want to build something from scratch"
 
 Use the whole loop. Next section.
 
 ---
 
-## The full loop
+## 🔁 The full loop
 
 What an actual session looks like.
 
@@ -261,7 +266,7 @@ app at once and you will get a mess — on any AI, at any price.
 
 ---
 
-## What a review looks like
+## 🔍 What a review looks like
 
 `/code-check` reports by severity and explains why each thing matters. It does
 not fix anything. You fix it, so you learn it.
@@ -272,7 +277,7 @@ not fix anything. You fix it, so you learn it.
 
 ---
 
-## How to ask for things
+## 💬 How to ask for things
 
 This matters more than which AI you use. Free models are good at small clear
 tasks and bad at big vague ones.
@@ -289,7 +294,7 @@ is too big. Split it.
 
 ---
 
-## Getting around
+## ⌨️ Getting around
 
 These come with OpenCode, not this kit.
 
@@ -313,7 +318,7 @@ everything well. If it ever stops working, pick another.
 
 ---
 
-## Five rules that will save you
+## 🧠 Five rules that will save you
 
 - **`/save` before every `/build`.** Undo is free, so experimenting is free.
 - **`/new` for each new thing.** Keeps context small and the model sharp.
@@ -326,7 +331,7 @@ everything well. If it ever stops working, pick another.
 
 ---
 
-## Files
+## 📁 Files
 
 | File | What it does | Where it goes |
 |---|---|---|
@@ -342,7 +347,7 @@ starting point, not scripture.
 
 ---
 
-## When something breaks
+## 🚨 When something breaks
 
 **"Model not found"** — free models get renamed and retired. Run `/models` and
 pick a working one. Two-minute fix, not a crisis.
@@ -359,7 +364,7 @@ either with `/connect`.
 
 ---
 
-## What this will not do
+## ⚠️ What this will not do
 
 It will not tell you whether anyone wants what you are building.
 
@@ -369,6 +374,6 @@ cheap that skipping this step has never been more tempting or more fatal.
 
 ---
 
-## Licence
+## 📄 Licence
 
 MIT. Take it, change it, use it however you like.
