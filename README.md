@@ -2,25 +2,57 @@
 
 Build software with AI, for free. No subscription, no API key, no credit card.
 
-Made for people starting out — founders with an idea, junior developers, anyone
-who wants to build without paying for tools.
-
-## What this is
-
-A pre-configured setup for [OpenCode](https://opencode.ai), an open-source AI
-coding agent. Clone it, run one command, start building.
-
-It comes with six commands. Use all six, or use one. There is no wrong way in.
+Six commands that make an AI agent behave like a good senior developer: plan
+before it builds, build one step at a time, review before it commits.
 
 ![The commands](docs/demo-skill-list.png)
 
+Made for people starting out — founders with an idea, junior developers, anyone
+who wants to build without paying for tools.
+
 ---
 
-## Setup
+## Install once, use everywhere
+
+Already have OpenCode? Four commands and you are done.
+
+```bash
+git clone https://github.com/Jaykukreja/ai-dev-starter-kit.git
+```
+
+```bash
+mkdir -p ~/.config/opencode
+```
+
+```bash
+cp -r ai-dev-starter-kit/.opencode/commands ~/.config/opencode/
+```
+
+```bash
+cp ai-dev-starter-kit/opencode.json ~/.config/opencode/
+```
+
+Open any project, run `opencode`, type `/`. The six commands are there.
+
+**One extra step per project.** Copy `AGENTS.md` into each repo you want the
+coding standards applied to. It holds project-specific rules, so it lives with
+the project rather than globally.
+
+```bash
+cp ai-dev-starter-kit/AGENTS.md /path/to/your-project/
+```
+
+Then open it and edit — your stack, your rules, how to run and test it.
+
+**Do not have OpenCode yet?** Keep reading.
+
+---
+
+## Installing OpenCode
 
 About ten minutes. All free.
 
-### Step 1 — Install OpenCode
+### Step 1 — Install it
 
 **Option A — Terminal (recommended)**
 
@@ -46,14 +78,10 @@ If a terminal feels intimidating, go to
 for macOS (Apple Silicon or Intel, matching your Mac), open the `.dmg`, drag the
 icon into Applications.
 
-### Step 2 — Get this kit
+### Step 2 — Add this kit
 
-```bash
-git clone https://github.com/Jaykukreja/ai-dev-starter-kit.git my-project
-cd my-project
-```
-
-Call it whatever you like instead of `my-project`.
+Run the four commands from [Install once, use everywhere](#install-once-use-everywhere)
+above.
 
 ### Step 3 — Start it
 
@@ -104,14 +132,14 @@ You do not have to use all of this. Take what is useful.
 
 ### "I just want my code reviewed"
 
-Drop this kit into a project you already have and run:
+Open any project and run:
 
 ```
 /code-check src/routes/user.js
 ```
 
 That is it. It reads your code against the rules in `AGENTS.md` and tells you
-what is wrong and why. Nothing else in this repo has to be used.
+what is wrong and why. Nothing else here has to be used.
 
 ![Code check](docs/demo-code-check.png)
 
@@ -134,8 +162,8 @@ That is on purpose. The debugging muscle only grows if you use it.
 /explain src/middlewares/auth.js
 ```
 
-Line by line, plain English, every term defined. Ask it as often as you like —
-it costs nothing and nobody is judging you.
+Line by line, plain English, every term defined. Ask as often as you like — it
+costs nothing and nobody is judging you.
 
 ### "I want to build something from scratch"
 
@@ -300,11 +328,11 @@ everything well. If it ever stops working, pick another.
 
 ## Files
 
-| File | What it does |
-|---|---|
-| `AGENTS.md` | The rulebook. Read silently every session. **Edit this for your project.** |
-| `.opencode/commands/` | The six commands. |
-| `opencode.json` | Model and permissions. |
+| File | What it does | Where it goes |
+|---|---|---|
+| `.opencode/commands/` | The six commands. | `~/.config/opencode/` — global |
+| `opencode.json` | Model and permissions. | `~/.config/opencode/` — global |
+| `AGENTS.md` | The rulebook. Read silently every session. | Each project root |
 
 The rules live in `AGENTS.md` rather than inside each command, so they apply
 while code is being written — not only when you review it.
