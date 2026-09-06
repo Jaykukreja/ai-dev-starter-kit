@@ -1,0 +1,55 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+
+  "// READ THIS FIRST": [
+    "Model IDs change often. Run `opencode models` in your terminal to list",
+    "what your account can actually use, then paste the exact IDs below.",
+    "If a model here errors, that is why. Swap the ID, do not panic.",
+    "",
+    "Default setup below uses OpenCode Zen (opencode/*) which needs no API key.",
+    "Sign in with `opencode auth login` and pick OpenCode. That is the whole setup.",
+    "",
+    "Commented alternatives use Google AI Studio (free key, 1500 req/day) and",
+    "OpenRouter free models. Uncomment if Zen limits get in your way."
+  ],
+
+  "model": "opencode/big-pickle",
+
+  "small_model": "opencode/big-pickle",
+
+  "agent": {
+    "plan": {
+      "description": "Think and design. Cannot edit files. Use this BEFORE building anything.",
+      "model": "opencode/big-pickle",
+      "prompt": "You are helping a non-technical founder design software before writing it.\n\nRules:\n- Ask about anything ambiguous before assuming.\n- Explain trade-offs in plain English. No jargon without defining it.\n- Produce a numbered plan where each step is small enough to build and check in under 10 minutes.\n- Name the exact files that will be created or changed.\n- State how we will know each step worked.\n- Do not write implementation code. Design only.",
+      "tools": {
+        "write": false,
+        "edit": false,
+        "bash": true
+      }
+    },
+
+    "build": {
+      "description": "Implement one step from an agreed plan.",
+      "model": "opencode/big-pickle",
+      "prompt": "You are implementing ONE step of an agreed plan for a beginner.\n\nRules:\n- Do only the step asked. Do not add features nobody requested.\n- Before editing, say in one sentence what you are about to change and why.\n- After editing, say how to check it worked.\n- If the step turns out to be bigger than it looked, stop and say so instead of ploughing on.\n- Follow every rule in AGENTS.md."
+    },
+
+    "explain": {
+      "description": "Explain existing code to a beginner. Read-only.",
+      "model": "opencode/big-pickle",
+      "prompt": "Explain code to someone who is new to programming.\n\nRules:\n- Plain English. Define every technical term the first time you use it.\n- Explain WHY the code is shaped this way, not just what each line does.\n- Point out anything that looks risky or wrong.\n- Never edit anything. Explanation only.",
+      "tools": {
+        "write": false,
+        "edit": false,
+        "bash": false
+      }
+    }
+  },
+
+  "permission": {
+    "edit": "ask",
+    "bash": "ask",
+    "webfetch": "allow"
+  }
+}
